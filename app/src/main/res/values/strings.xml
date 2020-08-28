@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Serpentario App</string>
+    <string name="SerpentarioApp">Serpentario App</string>
+    <string name="sign_in_with_google">Iniciar Sesión</string>
+    <string name="id">Id</string>
+    <string name="name">Usuario</string>
+    <string name="email_address">Correo</string>
+    <string name="sign_out">Cerrar Sesión</string>
+    <string name="Usuario">Usuario</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="option">Serpentario App</string>
+    <string name="TomarFoto">Tomar Foto</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Nombre">Nombre</string>
+</resources>

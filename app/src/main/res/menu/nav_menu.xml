@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/nav_header">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Ven_no_Ven"
+            android:icon="@mipmap/icono_splash_foreground"
+            android:title="Venenosas y no venenosas"
+            />
+
+        <item
+            android:id="@+id/Mapa"
+            android:icon="@mipmap/icono_splash_foreground"
+            android:title="Serpientes en Antioquia" />
+
+        <item
+            android:id="@+id/Avistamiento"
+            android:icon="@mipmap/icono_splash_foreground"
+            android:title="Avistamientos"/>
+
+        <item
+            android:id="@+id/Info"
+            android:icon="@mipmap/icono_splash_foreground"
+            android:title="Información general" />
+
+    </group>
+
+    <item android:title="Settings">
+
+        <menu>
+            <item
+                android:id="@+id/Enti_Resp"
+                android:icon="@mipmap/icono_splash_foreground"
+                android:title="Entidades responsables" />
+
+            <item
+                android:id="@+id/cerrarSesion"
+                android:icon="@mipmap/icono_splash_foreground"
+                android:title="Cerrar sesión" />
+        </menu>
+    </item>
+</menu>
