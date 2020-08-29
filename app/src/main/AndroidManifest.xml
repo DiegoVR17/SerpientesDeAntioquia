@@ -3,8 +3,10 @@
     package="com.example.serpentario_app">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true"></uses-feature>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -13,19 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VenNoVenActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".MapaActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".InfoActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".EntiActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".AvistamientoActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ConfiguracionActivity"
+            android:parentActivityName=".MainActivity" ></activity>
+        <activity android:name=".EntiRespActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".InfoAppActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VenNoVenActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MapaActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".InfoActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EntiActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AvistamientoActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActioBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActioBar" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

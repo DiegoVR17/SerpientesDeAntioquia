@@ -5,40 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/Ven_no_Ven"
+            android:id="@+id/InfoApp"
             android:icon="@mipmap/icono_splash_foreground"
-            android:title="Venenosas y no venenosas"
+            android:title="Información App"
             />
+        <item
+            android:id="@+id/EntiResp"
+            android:icon="@mipmap/icono_splash_foreground"
+            android:title="Entidades responsables" />
 
         <item
-            android:id="@+id/Mapa"
+            android:id="@+id/Configuracion"
             android:icon="@mipmap/icono_splash_foreground"
-            android:title="Serpientes en Antioquia" />
+            android:title="Configuración"/>
 
         <item
-            android:id="@+id/Avistamiento"
+            android:id="@+id/cerrarSesion"
             android:icon="@mipmap/icono_splash_foreground"
-            android:title="Avistamientos"/>
-
-        <item
-            android:id="@+id/Info"
-            android:icon="@mipmap/icono_splash_foreground"
-            android:title="Información general" />
+            android:title="Cerrar sesión" />
 
     </group>
-
-    <item android:title="Settings">
-
-        <menu>
-            <item
-                android:id="@+id/Enti_Resp"
-                android:icon="@mipmap/icono_splash_foreground"
-                android:title="Entidades responsables" />
-
-            <item
-                android:id="@+id/cerrarSesion"
-                android:icon="@mipmap/icono_splash_foreground"
-                android:title="Cerrar sesión" />
-        </menu>
-    </item>
 </menu>

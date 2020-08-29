@@ -27,20 +27,11 @@
             android:layout_height="match_parent"
             />
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/icono_drawer_snake_foreground">
-        </ImageView>
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/icono_uletras_foreground"
-            android:layout_marginTop="500dp">
-        </ImageView>
-
+            android:id="@+id/RecyclerViewMain">
+        </androidx.recyclerview.widget.RecyclerView>
 
 
         <com.google.android.material.navigation.NavigationView
@@ -49,7 +40,6 @@
             android:id="@+id/nav_view"
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
-            app:headerLayout="@layout/nav_header"
             app:menu="@menu/nav_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 

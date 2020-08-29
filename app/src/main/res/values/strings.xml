@@ -13,4 +13,6 @@
     <string name="TomarFoto">Tomar Foto</string>
     <string name="Guardar">Guardar</string>
     <string name="Nombre">Nombre</string>
+    <string name="Title">Title CardView</string>
+    <string name="Description">Description CardView</string>
 </resources>
