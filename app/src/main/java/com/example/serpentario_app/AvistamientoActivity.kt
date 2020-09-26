@@ -192,6 +192,10 @@ class AvistamientoActivity : AppCompatActivity() {
         }
         else{
             RequestPermission()
+            Toast.makeText(this,"Se debe activar la localización del dispositivo",Toast.LENGTH_LONG).show()
+            Handler().postDelayed({
+                goToMainActivity()
+            },2000)
         }
     }
 
