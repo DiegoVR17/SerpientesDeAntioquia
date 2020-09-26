@@ -7,8 +7,15 @@ import java.net.URL
 
 @Entity(tableName = "tabla_serpiente")
 class Serpiente(
-    @PrimaryKey @ColumnInfo(name = "id") val id: String = "",
-    @ColumnInfo(name = "especie") val especie: String = "",
-    @ColumnInfo(name = "tipo") val tipo: String = "",
-    @ColumnInfo(name = "foto") val urlFoto: URL
+    //@PrimaryKey @ColumnInfo(name = "id") val id: int = "",
+    @ColumnInfo(name = "Nombre") val nombre: String = "",
+    @ColumnInfo(name = "Tamaño") val tamano: String = "",
+    @ColumnInfo(name = "foto") val urlFoto: String= "",
+    @ColumnInfo(name = "Tipo") val tipo: String= "",
+    @ColumnInfo(name = "Estado") val estado: String = "",
+    @ColumnInfo(name = "Ambiente") val ambiente: String = "",
+    @ColumnInfo(name = "Lugar") val lugar: String = "",
+    @ColumnInfo(name = "Observaciones") val observaciones: String= "",
+    @ColumnInfo(name = "DateTime") val date_time:String = "",
+    @ColumnInfo(name = "Ubicación") val coordenadas: String = ""
 )

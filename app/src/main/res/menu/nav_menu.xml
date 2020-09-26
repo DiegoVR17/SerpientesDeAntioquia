@@ -6,22 +6,22 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/InfoApp"
-            android:icon="@mipmap/icono_splash_foreground"
+            android:icon="@drawable/icono_infoapp"
             android:title="Información App"
             />
         <item
             android:id="@+id/EntiResp"
-            android:icon="@mipmap/icono_splash_foreground"
+            android:icon="@drawable/icono_entirespon"
             android:title="Entidades responsables" />
 
         <item
             android:id="@+id/Configuracion"
-            android:icon="@mipmap/icono_splash_foreground"
+            android:icon="@drawable/icono_configuracion"
             android:title="Configuración"/>
 
         <item
             android:id="@+id/cerrarSesion"
-            android:icon="@mipmap/icono_splash_foreground"
+            android:icon="@drawable/icono_logout"
             android:title="Cerrar sesión" />
 
     </group>

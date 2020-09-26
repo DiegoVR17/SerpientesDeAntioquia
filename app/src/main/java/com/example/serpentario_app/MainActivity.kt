@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
 
-        //NombreUsuario.text = currentUser?.displayName
 
         val hView: View = nav_view.inflateHeaderView(R.layout.nav_header)
         val ImageView = hView.findViewById(R.id.imageView) as ImageView
@@ -140,9 +139,9 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    override fun onBackPressed() {
+    /*override fun onBackPressed() {
         super.onBackPressed()
         finish()
-    }
+    }*/
 
 }

@@ -55,4 +55,7 @@ dependencies {
     //CardView
     implementation "androidx.cardview:cardview:1.0.0"
 
+    //Location Google
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
 }

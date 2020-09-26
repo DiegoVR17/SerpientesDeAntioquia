@@ -11,33 +11,223 @@
     <ImageView
         android:id="@+id/imageViewFoto"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="120dp"
         android:layout_marginTop="16dp"
         android:src="@mipmap/icono_serpiente_login_foreground">
     </ImageView>
 
     <EditText
-        android:id="@+id/NombreSerp"
+    android:id="@+id/NombreSerp"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:hint="@string/Nombre"
+        android:textColorHint="@color/GreenU1"></EditText>
+
+    <EditText
+        android:id="@+id/TamaSerp"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:hint="@string/Tama"
+        android:textColorHint="@color/GreenU1"></EditText>
+
+    <RadioGroup
+        android:id="@+id/radioGTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@id/Tipo1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Tipo"
+            android:textColor="@color/GreenU"></TextView>
+
+        <RadioButton
+            android:id="@+id/Tipo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Venenosa" />
+
+        <RadioButton
+            android:id="@+id/Tipo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/NoVenenosa" />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radioGEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@id/Viva"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Estado"
+            android:textColor="@color/GreenU"></TextView>
+
+        <RadioButton
+            android:id="@+id/Viva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Viva" />
+
+        <RadioButton
+            android:id="@+id/Muerta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Muerta" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGAmbiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@id/Soleado"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Ambiente"
+            android:textColor="@color/GreenU"></TextView>
+
+        <RadioButton
+            android:id="@+id/Soleado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Soleado" />
+
+        <RadioButton
+            android:id="@+id/Nublado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Nublado" />
+
+        <RadioButton
+            android:id="@+id/Lluvioso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Lluvioso" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@id/Vivienda"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Lugar"
+            android:textColor="@color/GreenU"></TextView>
+
+        <RadioButton
+            android:id="@+id/Vivienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Vivienda" />
+
+        <RadioButton
+            android:id="@+id/Carretera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Carretera" />
+
+
+        <RadioButton
+            android:id="@+id/Campo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Campo" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/Observaciones"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/Observaciones"
+        android:textColorHint="@color/GreenU1"></EditText>
+
+    <TextView
+        android:id="@+id/Coordenadas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/Nombre"></EditText>
+        android:textColor="@color/GreenU1"
+        android:textSize="10dp"></TextView>
 
-    <Button
-        android:id="@+id/BtnTomarFoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="@string/TomarFoto">
-    </Button>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/BtnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="@string/Guardar"></Button>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/BtnTomarFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/icono_opencamara"
+            tools:ignore="VectorDrawableCompat"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/BtnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/icono_save"
+            tools:ignore="VectorDrawableCompat"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    </LinearLayout>
+
+
+
+
 
 
 

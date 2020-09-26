@@ -143,6 +143,8 @@
     <item name="white" type="color">#ffffff</item>
     <item name="GreenU" type="color">#01602D</item>
     <item name="GreenU1" type="color">#3DAE2B</item>
+    <item name="MoradoU" type="color">#752157</item>
+    <item name="NaranjaU" type="color">#FFA400</item>
 
 
     <integer-array name="EditColors">

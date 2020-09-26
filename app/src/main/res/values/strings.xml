@@ -12,7 +12,24 @@
     <string name="option">Serpentario App</string>
     <string name="TomarFoto">Tomar Foto</string>
     <string name="Guardar">Guardar</string>
-    <string name="Nombre">Nombre</string>
+    <string name="Nombre">Nombre común</string>
+    <string name="Tama">Tamaño aproximado (cm)</string>
     <string name="Title">Title CardView</string>
     <string name="Description">Description CardView</string>
+    <string name="Tipo">Tipo</string>
+    <string name="Venenosa">Venenosa</string>
+    <string name="NoVenenosa">No Venenosa</string>
+    <string name="Viva">Viva</string>
+    <string name="Estado">"Estado "</string>
+    <string name="Muerta">Muerta</string>
+    <string name="Lugar">Lugar</string>
+    <string name="Vivienda">Vivienda</string>
+    <string name="Ambiente">Ambiente</string>
+    <string name="Soleado">Soleado</string>
+    <string name="Nublado">Nublado</string>
+    <string name="Lluvioso">Lluvioso</string>
+    <string name="Carretera">Carretera</string>
+    <string name="Campo">Campo</string>
+    <string name="Arbol">Arbol</string>
+    <string name="Observaciones">Observaciones</string>
 </resources>
