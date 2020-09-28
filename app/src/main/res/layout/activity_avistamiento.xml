@@ -19,14 +19,14 @@
     <EditText
     android:id="@+id/NombreSerp"
     android:layout_width="match_parent"
-    android:layout_height="38dp"
+    android:layout_height="40dp"
     android:hint="@string/Nombre"
         android:textColorHint="@color/GreenU1"></EditText>
 
     <EditText
         android:id="@+id/TamaSerp"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="40dp"
         android:hint="@string/Tama"
         android:textColorHint="@color/GreenU1"></EditText>
 
