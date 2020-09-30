@@ -61,6 +61,8 @@ class AvistamientoActivity : AppCompatActivity() {
         var Nombre = NombreSerp.text.toString()
         var Coordenas = Coordenadas.text.toString()
 
+
+
         BtnTomarFoto.setOnClickListener {
 
             val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -80,23 +82,21 @@ class AvistamientoActivity : AppCompatActivity() {
             var lugar = ""
 
 
-            if (radioGTipo.checkedRadioButtonId != -1){
-                if(Tipo1.isChecked){
+                if(switch_voz.isChecked){
                     tipo +="Venenosa"
                 }
-                if (Tipo2.isChecked){
-                    tipo +="No venenosa"
+                else{
+                    tipo += "No venenosa"
                 }
-            }
-            if (radioGEstado.checkedRadioButtonId != -1){
-                if(Viva.isChecked){
+
+                if(switch_voz.isChecked){
+                     estado +="Viva"
+                }
+                else{
                     estado +="Viva"
-                }
-                if (Muerta.isChecked){
-                    estado +="Muerta"
-                }
-            }
-            if (radioGAmbiente.checkedRadioButtonId != -1){
+                 }
+
+
                 if(Soleado.isChecked){
                     ambiente +="Soleado"
                 }
@@ -106,8 +106,7 @@ class AvistamientoActivity : AppCompatActivity() {
                 if(Lluvioso.isChecked){
                     ambiente +="Lluvioso"
                 }
-            }
-            if (radioGLugar.checkedRadioButtonId != -1){
+
                 if(Vivienda.isChecked){
                     lugar +="Vivienda"
                 }
@@ -117,7 +116,7 @@ class AvistamientoActivity : AppCompatActivity() {
                 if(Campo.isChecked){
                     lugar +="Campo"
                 }
-            }
+
 
             if(Nombre == ""){
                 Nombre +="Por defecto"

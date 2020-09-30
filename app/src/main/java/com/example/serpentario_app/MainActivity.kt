@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val tv1 = hView.findViewById(R.id.NombreApp) as TextView
         val tv2 = hView.findViewById(R.id.NombreUsuario) as TextView
 
-        tv1.text = "Serpentario App"
+        tv1.text = "Serpientes de Antioquia"
         tv2.text = currentUser?.displayName
         ImageView.setImageResource(R.mipmap.icono_splash_foreground)
 

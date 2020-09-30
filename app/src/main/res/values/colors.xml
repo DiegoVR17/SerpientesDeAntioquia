@@ -145,6 +145,9 @@
     <item name="GreenU1" type="color">#3DAE2B</item>
     <item name="MoradoU" type="color">#752157</item>
     <item name="NaranjaU" type="color">#FFA400</item>
+    <item name="colorPrimary1" type="color">#00796b</item>
+    <item name="colorPrimaryDark1" type="color">#004c40</item>
+
 
 
     <integer-array name="EditColors">
