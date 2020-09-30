@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/tool_bar"
-        android:background="@color/MoradoU"
+        android:background="@color/colorPrimary1"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@color/white"/>

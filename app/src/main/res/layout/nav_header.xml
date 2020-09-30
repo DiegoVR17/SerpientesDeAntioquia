@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="230dp"
-    android:background="@color/MoradoU"
+    android:background="@color/colorPrimary1"
     android:paddingLeft="15dp"
     android:paddingBottom="15dp">
 
