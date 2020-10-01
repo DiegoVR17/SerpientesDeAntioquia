@@ -8,30 +8,22 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/InfoEntidades"
+        android:id="@+id/GuiaIden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/GreenU1"
-        android:text="Información entidades responsables"
+        android:text="Guá de identificación"
         android:textSize="20dp"
         android:layout_marginTop="50dp"></TextView>
 
     <TextView
-        android:id="@+id/Justificacion"
+        android:id="@+id/DescripcionEsp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/GreenU1"
-        android:text="Justificación de la aplicación"
+        android:text="Descripción de especies"
         android:textSize="20dp"
         android:layout_marginTop="50dp"></TextView>
 
-    <TextView
-        android:id="@+id/GuiaUso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/GreenU1"
-        android:text="Guia de uso"
-        android:textSize="20dp"
-        android:layout_marginTop="50dp"></TextView>
 
 </LinearLayout>

@@ -39,20 +39,55 @@ class MainActivity : AppCompatActivity() {
 
         val arrayList = ArrayList<CardViewModel>()
 
+        arrayList.add(
+            CardViewModel(
+                "Acerca de la aplicación",
+                "Informacion.Entidades paticipantes.Justificación de la aplicación.Guías de uso",
+                R.mipmap.icono_splash_foreground
+            )
+        )
 
-        arrayList.add(CardViewModel("Serpientes venenosas y no venenosas","Caracteristicas de las serpientes"
-            ,R.mipmap.icono_splash_foreground))
+        arrayList.add(
+            CardViewModel(
+                "Serpientes venenosas",
+                "Guía de identificación. Descripción de especies venenosas y distribución.",
+                R.mipmap.icono_serpiente_login_foreground
+            )
+        )
 
-        arrayList.add(CardViewModel("Mapa: Serpientes en Antioquia","Mapa con la distribución de serpientes en Antioquia"
-            ,R.mipmap.icono_serpiente_login_foreground))
+        arrayList.add(
+            CardViewModel(
+                "Serpientes no venenosas",
+                "Guía de identificación. Descripción de especies venenosas y distribución.Importancia de la conservación de especies.",
+                R.mipmap.icono_splash_foreground
+            )
+        )
 
-        arrayList.add(CardViewModel("Avistamientos","Agrege un avistamiento a la app"
-            ,R.mipmap.icono_splash_foreground))
+        arrayList.add(
+            CardViewModel(
+                "Registro de avistamientos",
+                "Informe de un avistamiento en su zona de hogar o trabajo.",
+                R.mipmap.icono_serpiente_login_foreground
+            )
+        )
 
-        arrayList.add(CardViewModel("Serpientes: Información general","Información sobre mordeduras, entre otros aspectos"
-            ,R.mipmap.icono_serpiente_login_foreground))
+        arrayList.add(
+            CardViewModel(
+                "Alerta de avistamiento",
+                "Zonas con avistamientos reportados por los usuarios.",
+                R.mipmap.icono_splash_foreground
+            )
+        )
 
-        val myAdapter = MyAdapter(arrayList,this)
+        arrayList.add(
+            CardViewModel(
+                "Accidente ofídico",
+                "Manifestaciones clínicas del accidente ofídico. Información y prevención del accidente ofídico.",
+                R.mipmap.icono_serpiente_login_foreground
+            )
+        )
+
+        val myAdapter = MyAdapter(arrayList, this)
 
         RecyclerViewMain.layoutManager = LinearLayoutManager(this)
         RecyclerViewMain.adapter = myAdapter
@@ -92,17 +127,20 @@ class MainActivity : AppCompatActivity() {
 
         nav_view.setNavigationItemSelectedListener {
                 item: MenuItem ->
-            when(item.itemId){
-                R.id.InfoApp ->{
+            when (item.itemId) {
+                R.id.Inicio -> {
+                    goToMainActivity()
+                }
+                R.id.InfoApp -> {
                     goToInfoAppActivity()
                 }
-                R.id.EntiResp ->{
+                R.id.EntiResp -> {
                     goToEntiRespActivity()
                 }
-                R.id.Configuracion ->{
+                R.id.Configuracion -> {
                     goToConfiguracionActivity()
                 }
-                R.id.cerrarSesion ->{
+                R.id.cerrarSesion -> {
                     mAuth.signOut()
                     Toast.makeText(this, "Sesión Terminada", Toast.LENGTH_SHORT).show()
                     goToLoginActivity()
@@ -118,13 +156,18 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun goToMainActivity() {
+        var intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
     private fun goToInfoAppActivity() {
-        var intent = Intent(this,InfoAppActivity::class.java)
+        var intent = Intent(this, InfoAppActivity::class.java)
         startActivity(intent)
     }
 
     private fun goToEntiRespActivity() {
-        var intent = Intent(this,EntiRespActivity::class.java)
+        var intent = Intent(this, EntiRespActivity::class.java)
         startActivity(intent)
     }
 

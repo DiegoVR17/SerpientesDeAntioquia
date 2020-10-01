@@ -19,6 +19,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
+import androidx.core.view.isInvisible
 import com.example.serpentario_app.Model.Serpiente
 import com.google.android.gms.location.*
 import com.google.android.gms.tasks.Continuation
@@ -82,29 +83,33 @@ class AvistamientoActivity : AppCompatActivity() {
             var lugar = ""
 
 
-                if(switch_voz.isChecked){
-                    tipo +="Venenosa"
-                }
-                else{
-                    tipo += "No venenosa"
-                }
+            if (switch_viva.isChecked) {
+                tipo += "Venenosa"
+            } else {
+                tipo += "No venenosa"
+            }
 
-                if(switch_voz.isChecked){
-                     estado +="Viva"
-                }
-                else{
-                    estado +="Viva"
-                 }
+            if (switch_estado.isChecked) {
+                estado += "Viva"
+            } else {
+                estado += "Viva"
+            }
 
 
-                if(Soleado.isChecked){
-                    ambiente +="Soleado"
+                if(Soleado.isChecked) {
+                    ambiente += "Soleado"
+                    Nublado.isEnabled = false
+                    Lluvioso.isEnabled = false
                 }
-                if (Nublado.isChecked){
-                    ambiente +="Nublado"
+                if (Nublado.isChecked) {
+                    ambiente += "Nublado"
+                    Soleado.isEnabled = false
+                    Lluvioso.isEnabled = false
                 }
-                if(Lluvioso.isChecked){
-                    ambiente +="Lluvioso"
+                if(Lluvioso.isChecked) {
+                    ambiente += "Lluvioso"
+                    Nublado.isEnabled = false
+                    Soleado.isEnabled = false
                 }
 
                 if(Vivienda.isChecked){

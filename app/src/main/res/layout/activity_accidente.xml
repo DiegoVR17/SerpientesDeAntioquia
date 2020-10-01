@@ -8,29 +8,29 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/InfoEntidades"
+        android:id="@+id/ManiClinicas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/GreenU1"
-        android:text="Información entidades responsables"
+        android:text="Manifestaciones clíncas del accidente ofídico"
         android:textSize="20dp"
         android:layout_marginTop="50dp"></TextView>
 
     <TextView
-        android:id="@+id/Justificacion"
+        android:id="@+id/Informacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/GreenU1"
-        android:text="Justificación de la aplicación"
+        android:text="Información sobre el accidente ofídico"
         android:textSize="20dp"
         android:layout_marginTop="50dp"></TextView>
 
     <TextView
-        android:id="@+id/GuiaUso"
+        android:id="@+id/Prevencion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/GreenU1"
-        android:text="Guia de uso"
+        android:text="Prevención del accidente ofídico"
         android:textSize="20dp"
         android:layout_marginTop="50dp"></TextView>
 

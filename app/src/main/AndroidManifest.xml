@@ -3,9 +3,9 @@
     package="com.example.serpentario_app">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -18,17 +18,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConfiguracionActivity"
-            android:parentActivityName=".MainActivity" ></activity>
-        <activity android:name=".EntiRespActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".InfoAppActivity"
+        <activity
+            android:name=".AccidenteActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".AlertaActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".VenNoVenActivity"
+            android:name=".NoVenenosasActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".MapaActivity"
+            android:name=".VenenosasActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ConfiguracionActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EntiRespActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".InfoAppActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".InfoActivity"

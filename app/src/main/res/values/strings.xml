@@ -32,4 +32,12 @@
     <string name="Campo">Campo</string>
     <string name="Arbol">Arbol</string>
     <string name="Observaciones">Observaciones</string>
+    <string name="Coordenadas">Coordenadas:</string>
+    <string name="Calificacion">Califica la Aplicación</string>
+    <string name="Inicio">Inicio</string>
+    <string name="Infornmacion">Información</string>
+    <string name="EntidadesResp">Entidades responsables</string>
+    <string name="Alertas">Alertas</string>
+    <string name="Configuracion">Configuración</string>
+    <string name="CerrarS">Cerrar sesión</string>
 </resources>

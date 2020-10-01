@@ -3,9 +3,9 @@ package com.example.serpentario_app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class VenNoVenActivity : AppCompatActivity() {
+class VenenosasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ven_no_ven)
+        setContentView(R.layout.activity_venenosas)
     }
 }
