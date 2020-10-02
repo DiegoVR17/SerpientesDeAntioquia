@@ -30,60 +30,60 @@ class MainActivity : AppCompatActivity() {
 
         val hView: View = nav_view.inflateHeaderView(R.layout.nav_header)
         val ImageView = hView.findViewById(R.id.imageView) as ImageView
-        val tv1 = hView.findViewById(R.id.NombreApp) as TextView
+        //val tv1 = hView.findViewById(R.id.NombreApp) as TextView
         val tv2 = hView.findViewById(R.id.NombreUsuario) as TextView
 
-        tv1.text = "Serpientes de Antioquia"
+        //tv1.text = "Serpientes de Antioquia"
         tv2.text = currentUser?.displayName
-        ImageView.setImageResource(R.mipmap.icono_splash_foreground)
+        ImageView.setImageResource(R.mipmap.icono_main3)
 
         val arrayList = ArrayList<CardViewModel>()
 
         arrayList.add(
             CardViewModel(
                 "Acerca de la aplicación",
-                "Informacion.Entidades paticipantes.Justificación de la aplicación.Guías de uso",
-                R.mipmap.icono_splash_foreground
+                "Informacion, entidades paticipantes, justificación de la aplicación y guías de uso.",
+                R.mipmap.icono_main1
             )
         )
 
         arrayList.add(
             CardViewModel(
                 "Serpientes venenosas",
-                "Guía de identificación. Descripción de especies venenosas y distribución.",
-                R.mipmap.icono_serpiente_login_foreground
+                "Guía de identificación, descripción de especies venenosas y distribución.",
+                R.mipmap.icono_main2
             )
         )
 
         arrayList.add(
             CardViewModel(
                 "Serpientes no venenosas",
-                "Guía de identificación. Descripción de especies venenosas y distribución.Importancia de la conservación de especies.",
-                R.mipmap.icono_splash_foreground
+                "Guía de identificación, descripción de especies no venenosas y distribución.",
+                R.mipmap.icono_main3
             )
         )
 
         arrayList.add(
             CardViewModel(
                 "Registro de avistamientos",
-                "Informe de un avistamiento en su zona de hogar o trabajo.",
-                R.mipmap.icono_serpiente_login_foreground
+                "Realice el reporte de un avistamiento en su zona de hogar o trabajo.",
+                R.mipmap.icono_main4
             )
         )
 
         arrayList.add(
             CardViewModel(
                 "Alerta de avistamiento",
-                "Zonas con avistamientos reportados por los usuarios.",
-                R.mipmap.icono_splash_foreground
+                "Identificación de zonas con avistamientos registrados por los usuarios.",
+                R.mipmap.icono_main5
             )
         )
 
         arrayList.add(
             CardViewModel(
                 "Accidente ofídico",
-                "Manifestaciones clínicas del accidente ofídico. Información y prevención del accidente ofídico.",
-                R.mipmap.icono_serpiente_login_foreground
+                "Accidente ofídico: Manifestaciones clínicas, información y prevención. ",
+                R.mipmap.icono_main1
             )
         )
 

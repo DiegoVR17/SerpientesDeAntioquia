@@ -16,7 +16,7 @@
       app:layout_constraintHorizontal_bias="0.659"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@mipmap/icono_serpiente_login_foreground">
+      app:srcCompat="@mipmap/icono_main1">
 
   </ImageView>
 

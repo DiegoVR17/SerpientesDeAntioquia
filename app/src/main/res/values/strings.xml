@@ -15,7 +15,7 @@
     <string name="Nombre">Nombre común</string>
     <string name="Tama">Tamaño aproximado (cm)</string>
     <string name="Title">Title CardView</string>
-    <string name="Description">Description CardView</string>
+    <string name="Description">Información sobre entidades responsables.</string>
     <string name="Tipo">Tipo</string>
     <string name="Venenosa">Venenosa</string>
     <string name="NoVenenosa">No Venenosa</string>
@@ -40,4 +40,21 @@
     <string name="Alertas">Alertas</string>
     <string name="Configuracion">Configuración</string>
     <string name="CerrarS">Cerrar sesión</string>
+    <string name="Información">Información Entidades</string>
+    <string name="Justificación">Justificación de la aplicación</string>
+    <string name="Description1">Razones y objetivos de la aplicación.</string>
+    <string name="GuíaUso">Guía de Uso</string>
+    <string name="Description2">Instructivo de navegación por la aplicación.</string>
+    <string name="GuiaIdenti">Guía de identificación</string>
+    <string name="Description3">Guía para reconocimiento de serpientes venenosas</string>
+    <string name="DescriEspe">Descripción de especies</string>
+    <string name="Description4">Descripción de las especies de serpientes venenosas</string>
+    <string name="Description5">Guía para reconocimiento de serpientes no venenosas</string>
+    <string name="Description6">Descripción de las especies de serpientes no venenosas</string>
+    <string name="ClinicaOfci">Manifestaciones clínicas</string>
+    <string name="Description7">Manifestaciones clínicas del accidente ofídico</string>
+    <string name="InfoOfi">Información de accidentes</string>
+    <string name="Description8">Información sobre el accidente ofídico</string>
+    <string name="Prevención">Prevención de accidentes</string>
+    <string name="Description9">Metódos de prevención del accidente ofídico</string>
 </resources>
