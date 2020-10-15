@@ -24,6 +24,15 @@
     <string name="Muerta">Muerta</string>
     <string name="Lugar">Lugar</string>
     <string name="Vivienda">Vivienda</string>
+
+    <string name="Cultivo">Cultivo</string>
+    <string name="Potrero">Potrero</string>
+    <string name="Bosque">Bosque</string>
+    <string name="Quebrada">Quebrada </string>
+
+
+
+
     <string name="Ambiente">Ambiente</string>
     <string name="Soleado">Soleado</string>
     <string name="Nublado">Nublado</string>
@@ -42,9 +51,9 @@
     <string name="CerrarS">Cerrar sesión</string>
     <string name="Información">Información Entidades</string>
     <string name="Justificación">Justificación de la aplicación</string>
-    <string name="Description1">Razones y objetivos de la aplicación.</string>
-    <string name="GuíaUso">Guía de Uso</string>
-    <string name="Description2">Instructivo de navegación por la aplicación.</string>
+    <string name="Description1">Razones y objetivos de la aplicación</string>
+    <string name="GuíaUso">Guía de identificación</string>
+    <string name="Description2">Serpientes de Antioquia, importancia de la conservación</string>
     <string name="GuiaIdenti">Guía de identificación</string>
     <string name="Description3">Guía para reconocimiento de serpientes venenosas</string>
     <string name="DescriEspe">Descripción de especies</string>
@@ -57,4 +66,14 @@
     <string name="Description8">Información sobre el accidente ofídico</string>
     <string name="Prevención">Prevención de accidentes</string>
     <string name="Description9">Metódos de prevención del accidente ofídico</string>
+    <string name="Inderterminado">Indeterminado</string>
+    <string name="Longitud">Longitud:</string>
+    <string name="Latitud">Latitud:</string>
+    <string name="Avistamiento">Registro de Avistamientos</string>
+    <string name="Accidente">Accidente ofídico</string>
+    <string name="Alerta">Alerta de avistamiento</string>
+    <string name="NoVeneno">Serpientes no venenosas</string>
+    <string name="Veneno">Serpientes venenosas</string>
+    <string name="AcercaApp">Acerca de la aplicación</string>
+    <string name="InformaciónE">Información entidades</string>
 </resources>

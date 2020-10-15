@@ -20,19 +20,24 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".AccidenteActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity"
+            android:label="@string/Accidente"></activity>
         <activity
             android:name=".AlertaActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/Alerta"/>
         <activity
             android:name=".NoVenenosasActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/NoVeneno"/>
         <activity
             android:name=".VenenosasActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/Veneno"/>
         <activity
             android:name=".ConfiguracionActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/Configuracion"/>
         <activity
             android:name=".EntiRespActivity"
             android:parentActivityName=".InfoActivity" />
@@ -41,13 +46,16 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".InfoActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/AcercaApp"/>
         <activity
             android:name=".EntiActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/InformaciónE"/>
         <activity
             android:name=".AvistamientoActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/Avistamiento"/>
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainActivity"

@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(
             CardViewModel(
                 "Acerca de la aplicación",
-                "Informacion, entidades paticipantes, justificación de la aplicación y guías de uso.",
+                "Informacion, entidades paticipantes, justificación de la aplicación y guías de uso",
                 R.mipmap.icono_main1
             )
         )
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(
             CardViewModel(
                 "Serpientes venenosas",
-                "Guía de identificación, descripción de especies venenosas y distribución.",
+                "Guía de identificación, descripción de especies venenosas y distribución",
                 R.mipmap.icono_main2
             )
         )
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(
             CardViewModel(
                 "Serpientes no venenosas",
-                "Guía de identificación, descripción de especies no venenosas y distribución.",
+                "Guía de identificación, descripción de especies no venenosas y distribución",
                 R.mipmap.icono_main3
             )
         )
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(
             CardViewModel(
                 "Registro de avistamientos",
-                "Realice el reporte de un avistamiento en su zona de hogar o trabajo.",
+                "Realice el reporte de un avistamiento en su zona de hogar o trabajo",
                 R.mipmap.icono_main4
             )
         )
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(
             CardViewModel(
                 "Alerta de avistamiento",
-                "Identificación de zonas con avistamientos registrados por los usuarios.",
+                "Identificación de zonas con avistamientos registrados por los usuarios",
                 R.mipmap.icono_main5
             )
         )
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(
             CardViewModel(
                 "Accidente ofídico",
-                "Accidente ofídico: Manifestaciones clínicas, información y prevención. ",
+                "Accidente ofídico: Manifestaciones clínicas, información y prevención",
                 R.mipmap.icono_main1
             )
         )
@@ -128,14 +128,18 @@ class MainActivity : AppCompatActivity() {
         nav_view.setNavigationItemSelectedListener {
                 item: MenuItem ->
             when (item.itemId) {
-                R.id.Inicio -> {
-                    goToMainActivity()
-                }
-                R.id.InfoApp -> {
-                    goToInfoAppActivity()
-                }
-                R.id.EntiResp -> {
-                    goToEntiRespActivity()
+//                R.id.Inicio -> {
+//                    goToMainActivity()
+//                }
+//                R.id.InfoApp -> {
+//                    goToInfoAppActivity()
+//                }
+//                R.id.EntiResp -> {
+//                    goToEntiRespActivity()
+//                }
+
+                R.id.Calificacion -> {
+                    Toast.makeText(this, "Califica la App", Toast.LENGTH_SHORT).show()
                 }
                 R.id.Configuracion -> {
                     goToConfiguracionActivity()
@@ -159,6 +163,7 @@ class MainActivity : AppCompatActivity() {
     private fun goToMainActivity() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     private fun goToInfoAppActivity() {

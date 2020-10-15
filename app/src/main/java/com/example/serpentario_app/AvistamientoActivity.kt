@@ -60,7 +60,6 @@ class AvistamientoActivity : AppCompatActivity() {
         val date = Date()
 
         var Nombre = NombreSerp.text.toString()
-        var Coordenas = Coordenadas.text.toString()
 
 
 
@@ -82,17 +81,27 @@ class AvistamientoActivity : AppCompatActivity() {
             var ambiente = ""
             var lugar = ""
 
+//
+//            if (switch_viva.isChecked) {
+//                tipo += "Venenosa"
+//            } else {
+//                tipo += "No venenosa"
+//            }
 
-            if (switch_viva.isChecked) {
+            if (switch_tipo.isChecked) {
                 tipo += "Venenosa"
             } else {
                 tipo += "No venenosa"
             }
 
-            if (switch_estado.isChecked) {
+            if(Viva.isChecked){
                 estado += "Viva"
-            } else {
-                estado += "Viva"
+            }
+            if(Muerta.isChecked){
+                estado += "Muerta"
+            }
+            if(Indeterminado.isChecked){
+                estado += "Inderminado"
             }
 
 
@@ -121,7 +130,18 @@ class AvistamientoActivity : AppCompatActivity() {
                 if(Campo.isChecked){
                     lugar +="Campo"
                 }
-
+                if(Cultivo.isChecked){
+                    lugar +="Cultivo"
+                }
+                if(Potrero.isChecked){
+                    lugar +="Potrero"
+                }
+                if(Bosque.isChecked){
+                    lugar +="Bosque"
+                }
+                if(Quebrada.isChecked){
+                    lugar +="Quebrada"
+                }
 
             if(Nombre == ""){
                 Nombre +="Por defecto"
@@ -182,7 +202,8 @@ class AvistamientoActivity : AppCompatActivity() {
                         getNewLocation()
                     }
                     else{
-                        Coordenadas.text = "Latitud: " + location.latitude + " Longitud: " + location.longitude
+                        Latitude.text = location.latitude.toString()
+                        Longitude.text = location.longitude.toString()
                     }
 
                 }
@@ -236,7 +257,8 @@ class AvistamientoActivity : AppCompatActivity() {
             var location = p0.lastLocation
             /*Coordenadas.text = "Latitud: " + location.latitude + "Longitud: " + location.longitude + " Ciudad" +
                     getCityName(location.latitude,location.longitude) + " País: " + getCountry(location.latitude,location.longitude)*/
-            Coordenadas.text = "Latitud: " + location.latitude + " Longitud: " + location.longitude
+            Latitude.text = location.latitude.toString()
+            Longitude.text = location.longitude.toString()
         }
     }
 
@@ -299,9 +321,11 @@ class AvistamientoActivity : AppCompatActivity() {
     private fun saveUser(tipo:String, estado: String, ambiente: String, lugar: String, urlFoto: String, date:String) {
 
         if((NombreSerp.text.toString() != "") || (TamaSerp.text.toString() != "") || (Observaciones.text.toString() != "") ||
-            (Coordenadas.text.toString() != "")){
+            (Latitude.text.toString() != "") || (Longitude.text.toString() != "")){
+
             var serpiente = Serpiente(NombreSerp.text.toString(),TamaSerp.text.toString(),urlFoto,tipo,estado,ambiente,
-                lugar,Observaciones.text.toString(),date,Coordenadas.text.toString())
+                lugar,Observaciones.text.toString(),date,Latitude.text.toString(),Longitude.text.toString())
+//
 
             val dataBase = FirebaseDatabase.getInstance()
             val myRef = dataBase.getReference("Serpientes")
@@ -312,7 +336,7 @@ class AvistamientoActivity : AppCompatActivity() {
         }
         else{
             var serpiente = Serpiente("Por defecto","Por defecto",urlFoto,tipo,estado,ambiente,
-                lugar,"Por defecto",date,"Por defecto")
+                lugar,"Por defecto",date,"Por defecto", "Por defecto")
 
             val dataBase = FirebaseDatabase.getInstance()
             val myRef = dataBase.getReference("Serpientes")

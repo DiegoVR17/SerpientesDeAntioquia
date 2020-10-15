@@ -1,42 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
-    android:orientation="vertical"
-    android:padding="30dp"
-    android:background="@color/white"
-    android:gravity="center_vertical">
+    android:background="@color/colorPrimary1"
+    android:gravity="center_horizontal">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:gravity="center"
         android:padding="12dp"
         android:text="@string/SerpentarioApp"
-        android:textColor="@color/colorPrimary1"
-        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"></TextView>
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/LogoApp"
-        android:layout_width="match_parent"
+        android:layout_width="310dp"
         android:layout_height="310dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        app:srcCompat="@mipmap/icono_splash_foreground">
+        android:src="@drawable/serpiente_logo"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
 
-    </ImageView>
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
 
     <ImageView
         android:id="@+id/LogoU"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        app:srcCompat="@mipmap/icono_udea_splash1"></ImageView>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/udea_logo_completo" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <ImageView
+            android:id="@+id/LogoApp"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@mipmap/icono_splash_foreground">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/LogoU"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@mipmap/icono_udea_splash1"></ImageView>-->

@@ -6,278 +6,463 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AvistamientoActivity"
-    android:padding="20dp"
     android:orientation="vertical"
     android:layout_centerHorizontal="true">
 
-    <ImageView
-        android:id="@+id/imageViewFoto"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="8dp"
-        android:src="@mipmap/icono_serpiente_login_foreground">
-    </ImageView>
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/NombreSerp"
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:hint="@string/Nombre"
-        android:textColorHint="@color/GreenU1" />
-
-    <EditText
-        android:id="@+id/TamaSerp"
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:hint="@string/Tama"
-        android:textColorHint="@color/GreenU1" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:paddingEnd="30dp"
-        android:paddingStart="0dp"
-        android:paddingRight="30dp"
-        android:paddingLeft="0dp">
-
-        <TextView
-            android:id="@+id/tVTipo"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="start"
-            android:text="Venenosa"
-            tools:ignore="RtlCompat" />
+            android:padding="20dp"
+            android:orientation="vertical">
 
-        <Switch
-            android:id="@+id/switch_estado"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="end"
-            tools:ignore="RtlCompat,UseSwitchCompatOrMaterialXml" />
-    </RelativeLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewFoto"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="25dp"
+                android:src="@mipmap/icono_main5"
+                android:visibility="invisible">
+            </de.hdodenhof.circleimageview.CircleImageView>
 
+            <EditText
+                android:id="@+id/NombreSerp"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:hint="@string/Nombre"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/margen_avistamiento"
+                android:layout_marginBottom="@dimen/margen_avistamiento"
+                android:textColorHint="@color/colorPrimaryDark1" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:paddingEnd="30dp"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingRight="30dp">
+            <EditText
+                android:id="@+id/TamaSerp"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:hint="@string/Tama"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/margen_avistamiento"
+                android:layout_marginBottom="@dimen/margen_avistamiento"
+                android:textColorHint="@color/colorPrimaryDark1" />
 
-        <TextView
-            android:id="@+id/viva"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="start"
-            android:text="@string/Viva"
-            tools:ignore="RtlCompat" />
-
-        <Switch
-            android:id="@+id/switch_viva"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="end"
-            tools:ignore="RtlCompat,UseSwitchCompatOrMaterialXml" />
-    </RelativeLayout>
-
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp">
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="10dp">
-
-
-            <TextView
-                android:id="@+id/Ambiente"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Ambiente"
-                android:layout_weight="1"
-                android:textColor="@color/GreenU" />
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="30dp"
+                android:paddingStart="0dp"
+                android:paddingRight="30dp"
+                android:paddingLeft="0dp"
+                android:layout_marginTop="@dimen/margen_avistamiento"
+                android:layout_marginBottom="@dimen/margen_avistamiento">
 
-            <RadioButton
-                android:id="@+id/Soleado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Soleado" />
+                <TextView
+                    android:id="@+id/tVTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="start"
+                    android:text="Venenosa"
+                    tools:ignore="RtlCompat"
+                    android:textSize="18sp"
 
-            <RadioButton
-                android:id="@+id/Nublado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Nublado" />
+                    android:textColor="@color/colorPrimaryDark1"/>
 
-            <RadioButton
-                android:id="@+id/Lluvioso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Lluvioso" />
+                <Switch
+                    android:id="@+id/switch_tipo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    tools:ignore="RtlCompat,UseSwitchCompatOrMaterialXml" />
+            </RelativeLayout>
 
-        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:paddingEnd="30dp"-->
+            <!--                android:paddingStart="0dp"-->
+            <!--                android:paddingLeft="0dp"-->
+            <!--                android:paddingRight="30dp"-->
+            <!--                android:layout_marginTop="@dimen/margen_avistamiento"-->
+            <!--                android:layout_marginBottom="@dimen/margen_avistamiento">-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/viva"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentStart="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:layout_gravity="start"-->
+            <!--                    android:text="@string/Viva"-->
+            <!--                    tools:ignore="RtlCompat"-->
+            <!--                    android:textSize="18sp"-->
+            <!--                    android:textColor="@color/colorPrimaryDark1"/>-->
+
+            <!--                <Switch-->
+            <!--                    android:id="@+id/switch_viva"-->
+            <!--                    android:layout_width="48dp"-->
+            <!--                    android:layout_height="48dp"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:layout_gravity="end"-->
+            <!--                    tools:ignore="RtlCompat,UseSwitchCompatOrMaterialXml" />-->
+            <!--            </RelativeLayout>-->
+
+
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Lugar"
-                android:layout_weight="1"
-                android:textColor="@color/GreenU"/>
+                android:paddingBottom="10dp">
 
-            <RadioButton
-                android:id="@+id/Vivienda"
-                android:layout_width="wrap_content"
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento">
+
+
+                    <TextView
+                        android:id="@+id/Estado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Estado"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimaryDark1"/>
+
+                    <RadioButton
+                        android:id="@+id/Viva"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Viva" />
+
+                    <RadioButton
+                        android:id="@+id/Muerta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Muerta" />
+
+                    <RadioButton
+                        android:id="@+id/Indeterminado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Inderterminado" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento">
+
+
+                    <TextView
+                        android:id="@+id/Ambiente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Ambiente"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimaryDark1"/>
+
+                    <RadioButton
+                        android:id="@+id/Soleado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Soleado" />
+
+                    <RadioButton
+                        android:id="@+id/Nublado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Nublado" />
+
+                    <RadioButton
+                        android:id="@+id/Lluvioso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Lluvioso" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lugar"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimaryDark1"/>
+
+                    <RadioButton
+                        android:id="@+id/Vivienda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Vivienda" />
+
+                    <RadioButton
+                        android:id="@+id/Carretera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Carretera" />
+
+
+                    <RadioButton
+                        android:id="@+id/Campo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Campo" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/Cultivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Cultivo" />
+
+                    <RadioButton
+                        android:id="@+id/Potrero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Potrero" />
+
+
+                    <RadioButton
+                        android:id="@+id/Bosque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Bosque" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:id="@+id/Quebrada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Quebrada" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+
+            <EditText
+                android:id="@+id/Observaciones"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Vivienda" />
+                android:hint="@string/Observaciones"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/colorPrimaryDark1"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/margen_avistamiento"
+                android:layout_marginBottom="@dimen/margen_avistamiento"/>
 
-            <RadioButton
-                android:id="@+id/Carretera"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Carretera" />
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/LatitudeT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/GreenU1"
+                    android:textSize="15dp"
+                    android:hint="@string/Latitud"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorPrimaryDark1"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento"/>
 
-            <RadioButton
-                android:id="@+id/Campo"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/Latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/GreenU1"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorPrimaryDark1"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Campo" />
-        </TableRow>
+                android:orientation="horizontal">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
+                <TextView
+                    android:id="@+id/LongitudeT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/GreenU1"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    android:hint="@string/Longitud"
+                    android:textColorHint="@color/colorPrimaryDark1"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento"/>
 
+                <TextView
+                    android:id="@+id/Longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/GreenU1"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorPrimaryDark1"
+                    android:layout_marginTop="@dimen/margen_avistamiento"
+                    android:layout_marginBottom="@dimen/margen_avistamiento"/>
 
-    <EditText
-        android:id="@+id/Observaciones"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Observaciones"
-        android:inputType="textMultiLine"
-        android:textColorHint="@color/GreenU1"
-        android:layout_marginBottom="2dp"/>
-
-    <TextView
-        android:id="@+id/Coordenadas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/GreenU1"
-        android:textSize="10dp"
-        android:hint="@string/Coordenadas"
-        android:textColorHint="@color/GreenU1" />
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:fitsSystemWindows="true">
-
-
-        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/BtnTomarFoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            card_view:cardCornerRadius="6dp"
-            android:layout_gravity="center">
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:gravity="center"
+                android:fitsSystemWindows="true"
+                android:layout_marginTop="@dimen/margen_avistamiento"
+                android:layout_marginBottom="@dimen/margen_avistamiento">
 
 
-                <ImageView
-                    android:id="@+id/iVTomarFoto"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="4dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icono_opencamara" />
-
-                <TextView
-                    android:id="@+id/tVTomarFoto"
-                    android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/BtnTomarFoto"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:maxLines="3"
-                    android:padding="8dp"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/TomarFoto"
-                    android:textColor="#222"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_margin="20dp"
+                    card_view:cardCornerRadius="6dp"
+                    android:gravity="center">
 
-        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/BtnGuardar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            card_view:cardCornerRadius="6dp"
-            android:layout_gravity="center">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
 
 
-                <ImageView
-                    android:id="@+id/iVGuardar"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="4dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icono_save" />
+                        <ImageView
+                            android:id="@+id/iVTomarFoto"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="4dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icono_opencamara" />
 
-                <TextView
-                    android:id="@+id/tVGuardar"
-                    android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/tVTomarFoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/TomarFoto"
+                            android:textColor="#222"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/BtnGuardar"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:maxLines="3"
-                    android:padding="8dp"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/Guardar"
-                    android:textColor="#222"
-                    android:textStyle="bold"/>
+                    android:layout_margin="20dp"
+                    card_view:cardCornerRadius="6dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iVGuardar"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="4dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icono_save" />
+
+                        <TextView
+                            android:id="@+id/tVGuardar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/Guardar"
+                            android:textColor="#222"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

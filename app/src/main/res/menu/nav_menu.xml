@@ -5,18 +5,18 @@
 
     <group android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/Inicio"
-            android:icon="@drawable/icono_inicio"
-            android:title="@string/Inicio" />
-        <item
-            android:id="@+id/InfoApp"
-            android:icon="@drawable/icono_infoapp"
-            android:title="@string/Infornmacion" />
-        <item
-            android:id="@+id/EntiResp"
-            android:icon="@drawable/icono_entirespon"
-            android:title="@string/EntidadesResp" />
+<!--        <item-->
+<!--            android:id="@+id/Inicio"-->
+<!--            android:icon="@drawable/icono_inicio"-->
+<!--            android:title="@string/Inicio" />-->
+<!--        <item-->
+<!--            android:id="@+id/InfoApp"-->
+<!--            android:icon="@drawable/icono_infoapp"-->
+<!--            android:title="@string/Infornmacion" />-->
+<!--        <item-->
+<!--            android:id="@+id/EntiResp"-->
+<!--            android:icon="@drawable/icono_entirespon"-->
+<!--            android:title="@string/EntidadesResp" />-->
 
         <item
             android:id="@+id/Calificacion"
@@ -24,24 +24,19 @@
             android:title="@string/Calificacion" />
 
         <item
-            android:id="@+id/Alertas"
-            android:icon="@drawable/icono_alertas"
-            android:title="@string/Alertas" />
+            android:id="@+id/Configuracion"
+            android:icon="@drawable/icono_configuracion"
+            android:title="@string/Configuracion" />
+
+        <item
+            android:id="@+id/cerrarSesion"
+            android:icon="@drawable/icono_logout"
+            android:title="@string/CerrarS" />
+
+<!--        <item-->
+<!--            android:id="@+id/Alertas"-->
+<!--            android:icon="@drawable/icono_alertas"-->
+<!--            android:title="@string/Alertas" />-->
 
     </group>
-
-    <item android:title="">
-
-        <menu>
-            <item
-                android:id="@+id/Configuracion"
-                android:icon="@drawable/icono_configuracion"
-                android:title="@string/Configuracion" />
-
-            <item
-                android:id="@+id/cerrarSesion"
-                android:icon="@drawable/icono_logout"
-                android:title="@string/CerrarS" />
-        </menu>
-    </item>
 </menu>

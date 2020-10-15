@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/colorPrimary1">
 
-  <ImageView
-      android:id="@+id/LogoSerpienteLogin"
-      android:layout_width="364dp"
-      android:layout_height="331dp"
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/LogoApp"
+      android:layout_width="310dp"
+      android:layout_height="310dp"
       android:layout_gravity="center_horizontal"
-      android:layout_marginTop="44dp"
+      android:src="@drawable/serpiente_logo"
+      app:civ_border_color="@color/black"
+      app:civ_border_width="0dp"
+      app:layout_constraintBottom_toTopOf="@+id/sign_in_btn"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.659"
+      app:layout_constraintHorizontal_bias="0.495"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@mipmap/icono_main1">
+      app:layout_constraintTop_toTopOf="parent">
 
-  </ImageView>
+  </de.hdodenhof.circleimageview.CircleImageView>
 
   <Button
       android:id="@+id/sign_in_btn"

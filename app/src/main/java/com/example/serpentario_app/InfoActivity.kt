@@ -24,6 +24,5 @@ class InfoActivity : AppCompatActivity() {
     private fun goEntiRespctivity() {
         val intent = Intent(this, EntiRespActivity::class.java)
         startActivity(intent)
-        finish()
     }
 }

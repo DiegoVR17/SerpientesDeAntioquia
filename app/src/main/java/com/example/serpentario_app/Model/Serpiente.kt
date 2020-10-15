@@ -17,5 +17,7 @@ class Serpiente(
     @ColumnInfo(name = "Lugar") val lugar: String = "",
     @ColumnInfo(name = "Observaciones") val observaciones: String= "",
     @ColumnInfo(name = "DateTime") val date_time:String = "",
-    @ColumnInfo(name = "Ubicación") val coordenadas: String = ""
+    @ColumnInfo(name = "Latitud") val latitud: String = "",
+    @ColumnInfo(name = "Longitud") val longitud: String = ""
+
 )
