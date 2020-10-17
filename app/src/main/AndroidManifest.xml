@@ -2,10 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.serpentario_app">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -18,26 +23,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".AccidenteActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/Accidente"></activity>
+            android:label="@string/Accidente"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AlertaActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/Alerta"/>
+            android:label="@string/Alerta"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".NoVenenosasActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/NoVeneno"/>
+            android:label="@string/NoVeneno"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".VenenosasActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/Veneno"/>
+            android:label="@string/Veneno"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ConfiguracionActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/Configuracion"/>
+            android:label="@string/Configuracion"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EntiRespActivity"
             android:parentActivityName=".InfoActivity" />
@@ -46,16 +68,16 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".InfoActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/AcercaApp"/>
+            android:label="@string/AcercaApp"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EntiActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/InformaciónE"/>
+            android:label="@string/InformaciónE"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AvistamientoActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/Avistamiento"/>
+            android:label="@string/Avistamiento"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainActivity"

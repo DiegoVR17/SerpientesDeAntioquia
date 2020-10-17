@@ -2,4 +2,5 @@
 <resources>
 
     <dimen name="margen_avistamiento">5dp</dimen>
+    <dimen name="sizeletterradioButton"> 14sp</dimen>
 </resources>

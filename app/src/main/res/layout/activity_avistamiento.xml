@@ -16,15 +16,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:padding="10dp"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageViewFoto"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
                 android:src="@mipmap/icono_main5"
                 android:visibility="invisible">
             </de.hdodenhof.circleimageview.CircleImageView>
@@ -47,6 +47,7 @@
                 android:textSize="18sp"
                 android:layout_marginTop="@dimen/margen_avistamiento"
                 android:layout_marginBottom="@dimen/margen_avistamiento"
+                android:inputType="number"
                 android:textColorHint="@color/colorPrimaryDark1" />
 
             <RelativeLayout
@@ -138,7 +139,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Estado"
                         android:layout_weight="1"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/sizeletterradioButton"
                         android:textColor="@color/colorPrimaryDark1"/>
 
                     <RadioButton
@@ -146,21 +147,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Viva" />
+                        android:text="@string/Viva"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <RadioButton
                         android:id="@+id/Muerta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Muerta" />
+                        android:text="@string/Muerta"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <RadioButton
                         android:id="@+id/Indeterminado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Inderterminado" />
+                        android:text="@string/Inderterminado"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                 </TableRow>
 
@@ -178,7 +182,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Ambiente"
                         android:layout_weight="1"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/sizeletterradioButton"
                         android:textColor="@color/colorPrimaryDark1"/>
 
                     <RadioButton
@@ -186,21 +190,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Soleado" />
+                        android:text="@string/Soleado"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <RadioButton
                         android:id="@+id/Nublado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Nublado" />
+                        android:text="@string/Nublado"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <RadioButton
                         android:id="@+id/Lluvioso"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Lluvioso" />
+                        android:text="@string/Lluvioso"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                 </TableRow>
 
@@ -215,7 +222,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Lugar"
                         android:layout_weight="1"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/sizeletterradioButton"
                         android:textColor="@color/colorPrimaryDark1"/>
 
                     <RadioButton
@@ -223,14 +230,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Vivienda" />
+                        android:text="@string/Vivienda"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <RadioButton
                         android:id="@+id/Carretera"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Carretera" />
+                        android:text="@string/Carretera"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
 
                     <RadioButton
@@ -238,7 +247,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Campo" />
+                        android:text="@string/Campo"
+                        android:textSize="@dimen/sizeletterradioButton"/>
                 </TableRow>
 
                 <TableRow
@@ -257,14 +267,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Cultivo" />
+                        android:text="@string/Cultivo"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <RadioButton
                         android:id="@+id/Potrero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Potrero" />
+                        android:text="@string/Potrero"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
 
                     <RadioButton
@@ -272,7 +284,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Bosque" />
+                        android:text="@string/Bosque"
+                        android:textSize="@dimen/sizeletterradioButton"/>
                 </TableRow>
 
                 <TableRow
@@ -291,12 +304,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/Quebrada" />
+                        android:text="@string/Quebrada"
+                        android:textSize="@dimen/sizeletterradioButton"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" />
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

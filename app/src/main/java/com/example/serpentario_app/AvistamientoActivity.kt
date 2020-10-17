@@ -74,6 +74,102 @@ class AvistamientoActivity : AppCompatActivity() {
 
         }
 
+        Viva.setOnClickListener{
+            Muerta.isChecked = false
+            Indeterminado.isChecked = false
+        }
+
+       Muerta.setOnClickListener{
+            Viva.isChecked = false
+            Indeterminado.isChecked = false
+        }
+
+        Indeterminado.setOnClickListener{
+            Viva.isChecked = false
+            Muerta.isChecked = false
+        }
+
+        Soleado.setOnClickListener{
+            Nublado.isChecked = false
+            Lluvioso.isChecked = false
+        }
+
+        Nublado.setOnClickListener{
+            Soleado.isChecked = false
+            Lluvioso.isChecked = false
+        }
+
+        Lluvioso.setOnClickListener{
+            Nublado.isChecked = false
+            Soleado.isChecked = false
+        }
+
+        Vivienda.setOnClickListener{
+            Carretera.isChecked = false
+            Campo.isChecked = false
+            Cultivo.isChecked = false
+            Potrero.isChecked = false
+            Bosque.isChecked = false
+            Quebrada.isChecked = false
+        }
+
+        Carretera.setOnClickListener{
+            Vivienda.isChecked = false
+            Campo.isChecked = false
+            Cultivo.isChecked = false
+            Potrero.isChecked = false
+            Bosque.isChecked = false
+            Quebrada.isChecked = false
+        }
+
+        Campo.setOnClickListener{
+            Carretera.isChecked = false
+            Vivienda.isChecked = false
+            Cultivo.isChecked = false
+            Potrero.isChecked = false
+            Bosque.isChecked = false
+            Quebrada.isChecked = false
+        }
+
+        Cultivo.setOnClickListener{
+            Carretera.isChecked = false
+            Campo.isChecked = false
+            Vivienda.isChecked = false
+            Potrero.isChecked = false
+            Bosque.isChecked = false
+            Quebrada.isChecked = false
+        }
+
+        Potrero.setOnClickListener{
+            Carretera.isChecked = false
+            Campo.isChecked = false
+            Cultivo.isChecked = false
+            Vivienda.isChecked = false
+            Bosque.isChecked = false
+            Quebrada.isChecked = false
+        }
+
+        Bosque.setOnClickListener{
+            Carretera.isChecked = false
+            Campo.isChecked = false
+            Cultivo.isChecked = false
+            Potrero.isChecked = false
+            Vivienda.isChecked = false
+            Quebrada.isChecked = false
+        }
+
+        Quebrada.setOnClickListener{
+            Carretera.isChecked = false
+            Campo.isChecked = false
+            Cultivo.isChecked = false
+            Potrero.isChecked = false
+            Bosque.isChecked = false
+            Vivienda.isChecked = false
+        }
+
+
+
+
         BtnGuardar.setOnClickListener {
             var storage = FirebaseStorage.getInstance()
             var tipo = ""
@@ -101,24 +197,18 @@ class AvistamientoActivity : AppCompatActivity() {
                 estado += "Muerta"
             }
             if(Indeterminado.isChecked){
-                estado += "Inderminado"
+                estado += "Indeterrminado"
             }
 
 
                 if(Soleado.isChecked) {
                     ambiente += "Soleado"
-                    Nublado.isEnabled = false
-                    Lluvioso.isEnabled = false
                 }
                 if (Nublado.isChecked) {
                     ambiente += "Nublado"
-                    Soleado.isEnabled = false
-                    Lluvioso.isEnabled = false
                 }
                 if(Lluvioso.isChecked) {
                     ambiente += "Lluvioso"
-                    Nublado.isEnabled = false
-                    Soleado.isEnabled = false
                 }
 
                 if(Vivienda.isChecked){
@@ -155,20 +245,19 @@ class AvistamientoActivity : AppCompatActivity() {
 
                 var uploadTask = photoRef.putBytes(data)
 
-                val urlTask =
-                    uploadTask.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> {task ->
-                        if(!task.isSuccessful){
-                            task.exception.let {
-                                throw it!!
-                            }
-                        }
-                        return@Continuation photoRef.downloadUrl
-                    }).addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            val downloadUri = task.result
-                            saveUser(tipo, estado, ambiente, lugar, downloadUri.toString(),date.toString())
-                        }
+            uploadTask.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> {task ->
+                if(!task.isSuccessful){
+                    task.exception.let {
+                        throw it!!
                     }
+                }
+                return@Continuation photoRef.downloadUrl
+            }).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val downloadUri = task.result
+                    saveUser(tipo, estado, ambiente, lugar, downloadUri.toString(),date.toString())
+                }
+            }
 
         }
 
@@ -212,7 +301,7 @@ class AvistamientoActivity : AppCompatActivity() {
                 Toast.makeText(this,"Se debe activar la localización del dispositivo",Toast.LENGTH_LONG).show()
                 Handler().postDelayed({
                         goToMainActivity()
-                },2000)
+                },10000)
             }
         }
         else{
@@ -220,7 +309,7 @@ class AvistamientoActivity : AppCompatActivity() {
             Toast.makeText(this,"Se debe activar la localización del dispositivo",Toast.LENGTH_LONG).show()
             Handler().postDelayed({
                 goToMainActivity()
-            },2000)
+            },10000)
         }
     }
 
@@ -247,7 +336,7 @@ class AvistamientoActivity : AppCompatActivity() {
             // for ActivityCompat#requestPermissions for more details.
             return
         }
-        fusedLocationProviderClient!!.requestLocationUpdates(
+        fusedLocationProviderClient.requestLocationUpdates(
             locationRequest,locationCallback, Looper.myLooper()
         )
     }
@@ -285,23 +374,23 @@ class AvistamientoActivity : AppCompatActivity() {
                 locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
     }
 
-    private fun getCityName(lat: Double, long: Double): String{
-        var CityName = ""
-        var geoCoder = Geocoder(this,Locale.getDefault())
-        var Adress = geoCoder.getFromLocation(lat,long,1)
+//    private fun getCityName(lat: Double, long: Double): String{
+//        var CityName: String
+//        var geoCoder = Geocoder(this,Locale.getDefault())
+//        var Adress = geoCoder.getFromLocation(lat,long,1)
+//
+//        CityName = Adress.get(0).locality
+//        return CityName
+//    }
 
-        CityName = Adress.get(0).locality
-        return CityName
-    }
-
-    private fun getCountry(lat: Double, long: Double): String{
-        var CountryName = ""
-        var geoCoder = Geocoder(this,Locale.getDefault())
-        var Adress = geoCoder.getFromLocation(lat,long,1)
-
-        CountryName = Adress.get(0).countryName
-        return CountryName
-    }
+//    private fun getCountry(lat: Double, long: Double): String{
+//        var CountryName = ""
+//        var geoCoder = Geocoder(this,Locale.getDefault())
+//        var Adress = geoCoder.getFromLocation(lat,long,1)
+//
+//        CountryName = Adress.get(0).countryName
+//        return CountryName
+//    }
 
 
 

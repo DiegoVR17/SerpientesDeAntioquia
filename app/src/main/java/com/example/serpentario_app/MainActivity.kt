@@ -39,13 +39,13 @@ class MainActivity : AppCompatActivity() {
 
         val arrayList = ArrayList<CardViewModel>()
 
-        arrayList.add(
-            CardViewModel(
-                "Acerca de la aplicación",
-                "Informacion, entidades paticipantes, justificación de la aplicación y guías de uso",
-                R.mipmap.icono_main1
-            )
-        )
+//        arrayList.add(
+//            CardViewModel(
+//                "Acerca de la aplicación",
+//                "Informacion, entidades paticipantes, justificación de la aplicación y guías de uso",
+//                R.mipmap.icono_main1
+//            )
+//        )
 
         arrayList.add(
             CardViewModel(
@@ -131,9 +131,9 @@ class MainActivity : AppCompatActivity() {
 //                R.id.Inicio -> {
 //                    goToMainActivity()
 //                }
-//                R.id.InfoApp -> {
-//                    goToInfoAppActivity()
-//                }
+               R.id.InfoApp -> {
+                 goToInfoActivity()
+              }
 //                R.id.EntiResp -> {
 //                    goToEntiRespActivity()
 //                }
@@ -166,8 +166,8 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun goToInfoAppActivity() {
-        var intent = Intent(this, InfoAppActivity::class.java)
+    private fun goToInfoActivity() {
+        var intent = Intent(this, InfoActivity::class.java)
         startActivity(intent)
     }
 

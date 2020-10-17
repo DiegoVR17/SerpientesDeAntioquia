@@ -31,8 +31,6 @@
     <string name="Quebrada">Quebrada </string>
 
 
-
-
     <string name="Ambiente">Ambiente</string>
     <string name="Soleado">Soleado</string>
     <string name="Nublado">Nublado</string>
@@ -66,7 +64,7 @@
     <string name="Description8">Información sobre el accidente ofídico</string>
     <string name="Prevención">Prevención de accidentes</string>
     <string name="Description9">Metódos de prevención del accidente ofídico</string>
-    <string name="Inderterminado">Indeterminado</string>
+    <string name="Inderterminado">No sabe</string>
     <string name="Longitud">Longitud:</string>
     <string name="Latitud">Latitud:</string>
     <string name="Avistamiento">Registro de Avistamientos</string>
@@ -76,4 +74,5 @@
     <string name="Veneno">Serpientes venenosas</string>
     <string name="AcercaApp">Acerca de la aplicación</string>
     <string name="InformaciónE">Información entidades</string>
+    <string name="title_activity_maps">Avistamientos</string>
 </resources>

@@ -39,10 +39,11 @@ class MyAdapter(val arrayList: ArrayList<CardViewModel>, val context: Context) :
         holder.itemView.setOnClickListener {
             val model = arrayList.get(position)
 
-            if (model.title == "Acerca de la aplicación") {
-                val intent = Intent(context, InfoActivity::class.java)
-                context.startActivity(intent)
-            } else if (model.title == "Serpientes venenosas") {
+//            if (model.title == "Acerca de la aplicación") {
+//                val intent = Intent(context, InfoActivity::class.java)
+//                context.startActivity(intent)
+//            } else
+            if (model.title == "Serpientes venenosas") {
                 val intent = Intent(context, VenenosasActivity::class.java)
                 context.startActivity(intent)
             } else if (model.title == "Serpientes no venenosas") {
@@ -52,7 +53,7 @@ class MyAdapter(val arrayList: ArrayList<CardViewModel>, val context: Context) :
                 val intent = Intent(context, AvistamientoActivity::class.java)
                 context.startActivity(intent)
             } else if (model.title == "Alerta de avistamiento") {
-                val intent = Intent(context, AlertaActivity::class.java)
+                val intent = Intent(context, MapsActivity::class.java)
                 context.startActivity(intent)
             } else {
                 val intent = Intent(context, AccidenteActivity::class.java)

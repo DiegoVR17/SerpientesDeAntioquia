@@ -19,6 +19,11 @@
 <!--            android:title="@string/EntidadesResp" />-->
 
         <item
+                android:id="@+id/InfoApp"
+               android:icon="@drawable/icono_infoapp"
+               android:title="@string/AcercaApp" />
+
+        <item
             android:id="@+id/Calificacion"
             android:icon="@drawable/icono_calificacion"
             android:title="@string/Calificacion" />
